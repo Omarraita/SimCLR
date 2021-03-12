@@ -74,7 +74,7 @@ class SimCLR(object):
 
                 images = images.to(self.args.device)
                 
-                print(images.size())
+                #print(images.size())
 
                 with autocast(enabled=self.args.fp16_precision):
                     features = self.model(images)
