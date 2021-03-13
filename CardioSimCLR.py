@@ -5,6 +5,7 @@ from data_aug.gaussian_blur import GaussianBlur
 from data_aug.view_generator import ContrastiveLearningViewGenerator
 import numpy as np 
 import torch
+from PIL import Image
 
 class CardioSimCLRDataset(Dataset):
     
