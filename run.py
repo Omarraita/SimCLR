@@ -64,10 +64,10 @@ def main():
         args.device = torch.device('cpu')
         args.gpu_index = -1
 
-    dataset = ContrastiveLearningDataset(args.data)
+    #dataset = ContrastiveLearningDataset(args.data)
 
-    train_dataset = dataset.get_dataset(args.dataset_name, args.n_views)
-    print(train_dataset[0][0][0].size())
+    #train_dataset = dataset.get_dataset(args.dataset_name, args.n_views)
+    train_dataset = get_cardio_smclr('/home/raita/Datasets/dataset_patches.npz')
     
     train_loader = torch.utils.data.DataLoader(
         train_dataset, batch_size=args.batch_size, shuffle=True,
