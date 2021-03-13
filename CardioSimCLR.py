@@ -15,7 +15,7 @@ class CardioSimCLRDataset(Dataset):
             transform (callable, optional): Optional transform to be applied
                 on a sample.
         """
-        self.patches, _ = load_data(npz_file)
+        self.patches, self.labels = load_data(npz_file)
         self.transform = transform
         self.tensor = to_tensor
         self.norm = to_normalize
