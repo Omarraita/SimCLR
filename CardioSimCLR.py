@@ -55,3 +55,9 @@ def load_data(file_path):
     X, Y = f['X'], f['Y']
     Y=np.squeeze(Y)
     return (X,Y)
+
+def get_cardio_smclr(train_file):
+    
+    train_data = CardioSimCLRDataset(train_file, transform = ContrastiveLearningViewGenerator(get_simclr_transform(96), 2))
+    
+    return train_data
