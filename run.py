@@ -67,7 +67,7 @@ def main():
     #dataset = ContrastiveLearningDataset(args.data)
 
     #train_dataset = dataset.get_dataset(args.dataset_name, args.n_views)
-    train_dataset = get_cardio_smclr('/home/raita/Datasets/dataset_patches.npz')
+    train_dataset = get_cardio_smclr('/home/raita/Datasets/train_patches.npz')
     
     train_loader = torch.utils.data.DataLoader(
         train_dataset, batch_size=args.batch_size, shuffle=True,
